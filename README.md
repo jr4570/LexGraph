@@ -1,11 +1,39 @@
-<div align="center">
+# 法脈 LexGraph — 中華民國全國法規（11,805 部全量調用）與白話文法律字典查詢系統
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+[![License: MIT](https://img.shields.io/badge/License-MIT-amber.svg)](https://opensource.org/licenses/MIT)
+[![R.O.C. Laws](https://img.shields.io/badge/中華民國全國法規-11,805部全量調用-blue.svg)](#)
+[![Responsive](https://img.shields.io/badge/Device-Mobile%20%7C%20Tablet%20%7C%20Desktop-emerald.svg)](#)
 
-  <h1>Built with AI Studio</h2>
+**法脈 LexGraph** 是一套專為查詢**中華民國（台灣）全國法規資料庫（全 11,805 部法規）與實務釋憲**設計的開源白話文法律字典與法規關聯圖譜系統。系統結合直觀的搜尋入口與**雙欄並列佈局（左欄法條與歷年修法對照 ＋ 右欄白話名詞字典與知識圖譜）**，並採用**「按一下再顯示出來（Click-to-Reveal）」**的清爽閱讀設計，讓使用者隨時查出：
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+1. **中華民國所有法律法條調用**：內建自動載入民法（全 1,229 條）、中華民國刑法（全 363 條）、中華民國憲法與增修條文、行政程序法、公司法、消費者保護法、勞動基準法、個人資料保護法、道路交通管理處罰條例等核心法典，並支援即時檢索調用全國 11,805 部法規之完整條文。
+2. **這詞定義是什麼（白話文按一下顯示）**：點擊法條內文中畫底線的專有名詞或下方詞條按鈕，即可按一下展開白話文秒懂定義、法學定義與構成要件。
+3. **幾年改了**：清楚標示中華民國修法年份與西元年份對照（例如：`民國 110 年 (2021年)`、`民國 112 年 (2023年)`）。
+4. **修改日期**：完整列出修正公布或憲法法庭宣判之年月日与施行日期。
+5. **修改了什麼**：白話文重點整理修法前後差異，並提供新舊條文逐字比對（`[+新增文字]` 與 `[-刪去舊文字]`）。
+6. **為何改了**：按一下即可展開「白話修法原因與社會背景」以及「立法院公報正式修正理由」。
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+---
 
-</div>
+## 本地端安裝與啟動方式
+
+```bash
+# 1. 安裝相依套件
+npm install
+
+# 2. 執行核心法規檢索、新舊條文逐字比對與圖譜演算法單元測試
+npx tsx --test src/utils/legalEngine.test.ts
+
+# 3. 啟動開發伺服器 (預設運行於 http://localhost:3000)
+npm run dev
+
+# 4. 靜態型別檢查與生產環境打包
+npm run lint
+npm run build
+```
+
+---
+
+## 開源授權 (License)
+
+本專案採用 **MIT License** 開放原始碼授權，歡迎自由研究、教學與延伸開發。

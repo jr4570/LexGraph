@@ -1,0 +1,6 @@
+{
+  "name": "法脈 LexGraph — 互動式法典與法規關聯圖譜系統",
+  "description": "結合雙欄式法條檢索、歷年修法新舊條文對照、跨條文引用追溯與名詞知識圖譜的互動式法律學習系統。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
